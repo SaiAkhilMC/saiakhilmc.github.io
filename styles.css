@@ -1,25 +1,35 @@
+/* Global Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
+    color: #333;
+    background-color: #f4f4f9;
 }
 
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header Styles */
 header {
-    background: #333;
+    background-color: #007bff;
     color: #fff;
     padding: 20px 0;
     text-align: center;
 }
 
 header h1 {
-    margin: 0;
     font-size: 2.5em;
+    margin: 0;
 }
 
 header p {
-    margin: 0.5em 0 0;
     font-size: 1.2em;
+    margin: 10px 0 0;
 }
 
 nav ul {
@@ -35,101 +45,73 @@ nav ul li {
 nav ul li a {
     color: #fff;
     text-decoration: none;
+    font-weight: bold;
 }
 
 nav ul li a:hover {
     text-decoration: underline;
 }
 
-.section {
+/* Section Styles */
+section {
     padding: 40px 0;
-    background: #f4f4f4;
 }
 
-.container {
-    width: 80%;
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-h2 {
+section h2 {
+    font-size: 2em;
     text-align: center;
     margin-bottom: 20px;
 }
 
-.project, .experience, .education {
-    background: #fff;
+.about-section p, .projects-section .project p {
+    text-align: center;
+    font-size: 1.1em;
+}
+
+/* Project Styles */
+.project-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.project {
+    background-color: #fff;
     padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    width: calc(33% - 40px);
+    box-sizing: border-box;
+    text-align: center;
 }
 
-.project h3, .experience h3, .education h3 {
-    margin-top: 0;
+.project h3 {
+    color: #007bff;
 }
 
-.project a, .experience a, .education a {
+/* Contact Section Styles */
+.contact-section p {
+    text-align: center;
+    font-size: 1.1em;
+}
+
+.contact-section a {
     color: #007bff;
     text-decoration: none;
 }
 
-.project a:hover, .experience a:hover, .education a:hover {
+.contact-section a:hover {
     text-decoration: underline;
 }
 
-ul {
-    list-style: disc;
-    padding-left: 20px;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-}
-
-form div {
-    margin-bottom: 10px;
-}
-
-form label {
-    font-weight: bold;
-}
-
-form input, form textarea {
-    padding: 8px;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-    width: 100%;
-}
-
-form button {
-    padding: 10px;
-    background: #333;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-form button:hover {
-    background: #555;
-}
-
+/* Footer Styles */
 footer {
-    background: #333;
+    background-color: #333;
     color: #fff;
     text-align: center;
     padding: 20px 0;
 }
 
-.social-links a {
-    color: #fff;
-    margin: 0 10px;
-    text-decoration: none;
-    font-size: 1.5em;
-}
-
-.social-links a:hover {
-    color: #007bff;
+footer p {
+    margin: 0;
 }
