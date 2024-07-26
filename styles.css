@@ -19,7 +19,16 @@ header {
     background-color: #007bff;
     color: #fff;
     padding: 20px 0;
-    text-align: center;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 header h1 {
@@ -29,46 +38,84 @@ header h1 {
 
 header p {
     font-size: 1.2em;
-    margin: 10px 0 0;
+    margin: 5px 0 0;
 }
 
 nav ul {
     list-style: none;
     padding: 0;
+    display: flex;
 }
 
 nav ul li {
-    display: inline;
-    margin: 0 10px;
+    margin: 0 15px;
 }
 
 nav ul li a {
     color: #fff;
     text-decoration: none;
     font-weight: bold;
+    transition: color 0.3s;
 }
 
 nav ul li a:hover {
-    text-decoration: underline;
+    color: #ffdb58;
 }
 
 /* Section Styles */
 section {
-    padding: 40px 0;
+    padding: 60px 0;
 }
 
 section h2 {
-    font-size: 2em;
+    font-size: 2.5em;
     text-align: center;
+    margin-bottom: 30px;
+}
+
+section p {
+    text-align: center;
+    font-size: 1.1em;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Home Section */
+.home-section {
+    background: url('https://via.placeholder.com/1920x1080') no-repeat center center/cover;
+    color: #fff;
+    text-align: center;
+    padding: 120px 20px;
+}
+
+.home-section .container {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 40px;
+    border-radius: 10px;
+}
+
+.home-section h2 {
+    font-size: 3em;
     margin-bottom: 20px;
 }
 
-.about-section p, .projects-section .project p {
-    text-align: center;
-    font-size: 1.1em;
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #007bff;
+    background-color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
 }
 
-/* Project Styles */
+.btn:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+/* Projects Section */
 .project-list {
     display: flex;
     flex-wrap: wrap;
@@ -83,30 +130,68 @@ section h2 {
     width: calc(33% - 40px);
     box-sizing: border-box;
     text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
 .project h3 {
     color: #007bff;
 }
 
-/* Contact Section Styles */
+.project-link {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.project-link:hover {
+    color: #ffdb58;
+}
+
+/* Contact Section */
 .contact-section p {
     text-align: center;
     font-size: 1.1em;
 }
 
-.contact-section a {
-    color: #007bff;
-    text-decoration: none;
+form {
+    max-width: 600px;
+    margin: 20px auto 0;
+    display: flex;
+    flex-direction: column;
 }
 
-.contact-section a:hover {
-    text-decoration: underline;
+form input, form textarea {
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+form button {
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #0056b3;
 }
 
 /* Footer Styles */
 footer {
-    background-color: #333;
+    background-color: #007bff;
     color: #fff;
     text-align: center;
     padding: 20px 0;
@@ -114,4 +199,52 @@ footer {
 
 footer p {
     margin: 0;
+}
+
+footer .social-links {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+footer .social-links li {
+    margin: 0 10px;
+}
+
+footer .social-links li a {
+    color: #fff;
+    font-size: 1.5em;
+    transition: color 0.3s;
+}
+
+footer .social-links li a:hover {
+    color: #ffdb58;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .project-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project {
+        width: 90%;
+    }
+
+    header .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
 }
